@@ -1,25 +1,41 @@
 ## Histogram
 
-1.INSTALL FOLLOWING PACKAGES
+  This script is used to convert the image to graph representation
+
+## Installation
+ install opencv,numpy,matplotlib by using pip
+      pip install opencv-python
+numpy
+       pip install numpy
+       
+matplotlib
+
+       pip install matplotlib
+## Usage
+
+Run the script "plot_histogram.py".
+provide the path to the input image as an argument.
+The script will generate a histogram plot for each color channel and display it.
+
+## Explanation
+cv.imread() : Reads the input image.
+cv.calcHist() :Calculate histograms for each color channel.
+plt.plot() : Plots the histograms using Matplotlib.
+
+## Example
+Input
+![shizuka](https://github.com/sahithyajadala/expr3/assets/169046012/5de4e999-2253-4078-9ff5-aeb0822333ee)
+
+output
 
 
-```numpy,opencv,matplotlib```
+![output](https://github.com/sahithyajadala/expr3/assets/169046012/c91ada1f-5a20-4e4c-bea6-065b87e0cd7f)
 
 
-2.CODE
 
-```
-import numpy as np
-import cv2 as cv
-from matplotlib import pyplot as plt
- 
-img = cv.imread('/home/sahitya-jadala/Desktop/exp1/shizuka.jpeg')
-cv.imwrite("/home/sahitya-jadala/Desktop/exp1/shizzu.jpeg",img)
-assert img is not None, "file could not be read, check with os.path.exists()"
-color = ('b','g','r')
-for i,col in enumerate(color):
- histr = cv.calcHist([img],[i],None,[256],[0,256])
- plt.plot(histr,color = col)
- plt.xlim([0,256])
-plt.show()
-```
+
+
+
+
+     
+
